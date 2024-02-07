@@ -1,0 +1,33 @@
+@url = http://localhost:3601
+
+### GET ALL WORKOUTS
+GET {{url}}/workouts
+
+### CREATE A WORKOUT
+POST {{url}}/workouts
+content-type: application/json
+
+{
+	"title": "Body building workouts",
+	"duration": "45 minutes"
+}
+
+### UPDATE A WORKOUT
+PUT {{url}}/workouts/dd17
+content-type: application/json
+
+{
+	"title": "Calves workout - Version 2.0",
+	"duration": "45 minutes"
+}
+
+### UPDATE A FIELD OR FIELDS
+PATCH {{url}}/workouts/c04c
+content-type: application/json
+
+{
+	"duration": "15 minutes"
+}
+
+### DELETE A WORKOUT
+DELETE {{url}}/workouts/dd17

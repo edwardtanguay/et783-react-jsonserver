@@ -1,15 +1,20 @@
 {
-	"workouts": [
-		{
-			"id": 1,
-			"title": "Bicep workout",
-			"duration": "1 hour"
-		},
-		{
-			"id": 2,
-			"title": "Calves workout",
-			"duration": "30 minutes"
-		}
-	],
-	"users": []
+  "workouts": [
+    {
+      "id": "1ss7",
+      "title": "Bicep workout",
+      "duration": "1 hour"
+    },
+    {
+      "id": "c04c",
+      "title": "Thigh workouts",
+      "duration": "15 minutes"
+    },
+    {
+      "id": "2b70",
+      "title": "Body building workouts",
+      "duration": "45 minutes"
+    }
+  ],
+  "users": []
 }
