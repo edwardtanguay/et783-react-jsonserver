@@ -9,10 +9,10 @@
 			- patch (Update)
 			- delete (Delete)
 	- x Postman
-- .. install concurrently
-	- first start jsonserver (api) - 3600
-	- then start react - 3601
-- do CRUD from frontend
+- x install concurrently
+	- x first start jsonserver (api) - 3600
+	- x then start react - 3601
+- .. do CRUD from frontend
 	- install axios
 	 	- get (Read)
 		- post (Create)

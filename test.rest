@@ -8,7 +8,7 @@ POST {{url}}/workouts
 content-type: application/json
 
 {
-	"title": "Body building workouts",
+	"title": "Workout 8228",
 	"duration": "45 minutes"
 }
 
