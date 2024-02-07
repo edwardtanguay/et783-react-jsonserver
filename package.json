@@ -4,13 +4,15 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
+    "dev": "conc \"npm run api\" \"npm run frontend\"",
     "api": "json-server --watch ./src/data/db.json --port 3601",
-    "dev": "vite --port 3600 --open",
+    "frontend": "vite --port 3600 --open",
     "build": "tsc && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
   },
   "dependencies": {
+    "concurrently": "^8.2.2",
     "json-server": "^1.0.0-alpha.23",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
