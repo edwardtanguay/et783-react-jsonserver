@@ -19,6 +19,11 @@
       "id": "3833",
       "title": "Workout 8228",
       "duration": "45 minutes"
+    },
+    {
+      "id": "b89d",
+      "title": "Workout from React 8292",
+      "duration": "45 minutes"
     }
   ],
   "users": []

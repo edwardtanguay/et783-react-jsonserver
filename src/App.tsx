@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { IWorkout } from "./interfaces";
 import axios from "axios";
 
-const backendUrl = 'http://localhost:3601';
+const backendUrl = "http://localhost:3601";
 
 function App() {
 	const [workouts, setWorkouts] = useState<IWorkout[]>([]);
@@ -15,17 +15,41 @@ function App() {
 		})();
 	}, []);
 
+	const addWorkout = () => {
+		(async () => {
+			const workout = {
+				title: "Workout from React 8292",
+				duration: "45 minutes",
+			};
+			const headers = {
+				"Content-Type": "application/json",
+			};
+			try {
+				const response = await axios.post(
+					`${backendUrl}/workouts`,
+					workout,
+					{ headers }
+				);
+				console.log(response);
+			} catch (e) {
+				console.log("there was an error");
+			}
+		})();
+	};
+
 	return (
 		<>
 			<h1 className="text-2xl">Workout Site</h1>
 			<p>There are {workouts.length} workouts.</p>
 			<ul>
-				{workouts.map(workout => {
-					return (
-						<li key={workout.id}>{workout.title}</li>
-					)
+				{workouts.map((workout) => {
+					return <li key={workout.id}>{workout.title}</li>;
 				})}
 			</ul>
+			<hr />
+			<button onClick={() => addWorkout()}>Add a workout</button>
+			<hr />
+
 		</>
 	);
 }
