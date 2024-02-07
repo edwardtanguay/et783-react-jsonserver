@@ -1,0 +1,20 @@
+- x create file: db.json
+- x install jsonserver
+- .. test the api
+	- test.rest
+	 	- get (Read)
+		- post (Create)
+		- put (Update)
+		- patch (Update)
+		- delete (Delete)
+- install concurrently
+	- first start jsonserver (api) - 3600
+	- then start react - 3601
+- do CRUD from frontend
+	- install axios
+	 	- get (Read)
+		- post (Create)
+		- put (Update)
+		- patch (Update)
+		- delete (Delete)
+- publish site
