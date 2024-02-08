@@ -6,13 +6,14 @@ const backendUrl = "http://localhost:3601";
 
 function App() {
 	const [workouts, setWorkouts] = useState<IWorkout[]>([]);
+	const loadWorkouts = async () => {
+		const response = await axios.get(`${backendUrl}/workouts`);
+		const _workouts = response.data;
+		setWorkouts(_workouts);
+	};
 
 	useEffect(() => {
-		(async () => {
-			const response = await axios.get(`${backendUrl}/workouts`);
-			const _workouts = response.data;
-			setWorkouts(_workouts);
-		})();
+		loadWorkouts();
 	}, []);
 
 	const addWorkout = () => {
@@ -59,13 +60,33 @@ function App() {
 		})();
 	};
 
+	const deleteWorkout = (workout: IWorkout) => {
+		(async () => {
+			try {
+				const response = await axios.delete(
+					`${backendUrl}/workouts/${workout.id}`
+				);
+				console.log(response);
+			} catch (e) {
+				console.log("there was an error");
+			}
+		})();
+	};
+
 	return (
 		<>
 			<h1 className="text-2xl">Workout Site</h1>
 			<p>There are {workouts.length} workouts.</p>
 			<ul>
 				{workouts.map((workout) => {
-					return <li key={workout.id}>{workout.title} - {workout.duration}</li>;
+					return (
+						<li className="mb-2" key={workout.id}>
+							{workout.title} - {workout.duration}{" "}
+							<button onClick={() => deleteWorkout(workout)}>
+								Delete
+							</button>
+						</li>
+					);
 				})}
 			</ul>
 			<hr />

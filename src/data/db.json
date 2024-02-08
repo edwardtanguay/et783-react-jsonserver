@@ -6,11 +6,6 @@
       "id": "1ss7"
     },
     {
-      "id": "c04c",
-      "title": "Thigh workouts",
-      "duration": "15 minutes"
-    },
-    {
       "id": "2b70",
       "title": "Body building workouts",
       "duration": "45 minutes"
@@ -18,6 +13,11 @@
     {
       "id": "3833",
       "title": "Workout 8228",
+      "duration": "45 minutes"
+    },
+    {
+      "id": "217c",
+      "title": "Workout from React 8292",
       "duration": "45 minutes"
     }
   ],
