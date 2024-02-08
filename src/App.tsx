@@ -37,19 +37,41 @@ function App() {
 		})();
 	};
 
+	const changeWorkout = () => {
+		(async () => {
+			const workout = {
+				title: "Bicep workout",
+				duration: "99 hours",
+			};
+			const headers = {
+				"Content-Type": "application/json",
+			};
+			try {
+				const response = await axios.put(
+					`${backendUrl}/workouts/1ss7`,
+					workout,
+					{ headers }
+				);
+				console.log(response);
+			} catch (e) {
+				console.log("there was an error");
+			}
+		})();
+	};
+
 	return (
 		<>
 			<h1 className="text-2xl">Workout Site</h1>
 			<p>There are {workouts.length} workouts.</p>
 			<ul>
 				{workouts.map((workout) => {
-					return <li key={workout.id}>{workout.title}</li>;
+					return <li key={workout.id}>{workout.title} - {workout.duration}</li>;
 				})}
 			</ul>
 			<hr />
 			<button onClick={() => addWorkout()}>Add a workout</button>
 			<hr />
-
+			<button onClick={() => changeWorkout()}>Change a workout</button>
 		</>
 	);
 }

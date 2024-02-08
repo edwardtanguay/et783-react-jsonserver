@@ -1,9 +1,9 @@
 {
   "workouts": [
     {
-      "id": "1ss7",
       "title": "Bicep workout",
-      "duration": "1 hour"
+      "duration": "99 hours",
+      "id": "1ss7"
     },
     {
       "id": "c04c",
@@ -18,11 +18,6 @@
     {
       "id": "3833",
       "title": "Workout 8228",
-      "duration": "45 minutes"
-    },
-    {
-      "id": "b89d",
-      "title": "Workout from React 8292",
       "duration": "45 minutes"
     }
   ],
