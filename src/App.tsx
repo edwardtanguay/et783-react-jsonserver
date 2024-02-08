@@ -32,6 +32,7 @@ function App() {
 					{ headers }
 				);
 				console.log(response);
+				loadWorkouts();
 			} catch (e) {
 				console.log("there was an error");
 			}
@@ -54,6 +55,7 @@ function App() {
 					{ headers }
 				);
 				console.log(response);
+				loadWorkouts();
 			} catch (e) {
 				console.log("there was an error");
 			}
@@ -67,6 +69,7 @@ function App() {
 					`${backendUrl}/workouts/${workout.id}`
 				);
 				console.log(response);
+				loadWorkouts();
 			} catch (e) {
 				console.log("there was an error");
 			}
